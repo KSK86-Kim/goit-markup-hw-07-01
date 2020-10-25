@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: $primary-title-color;
+  font-family: Roboto, sans-serif;
+}
+
+img {
+  display: block;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
