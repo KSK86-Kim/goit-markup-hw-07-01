@@ -16,7 +16,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
 
   <body>
@@ -74,18 +74,18 @@
 
     <main class="main">
       <!-- Hero -->
-      <section class="section-hero">
+      <section class="hero__section">
         <div class="hero">
           <div class="container">
             <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
-            <button type="button" class="modal-btn" data-modal-open>
+            <button type="button" class="btn hero__btn" data-modal-open>
               Заказать услугу
             </button>
           </div>
         </div>
       </section>
       <!-- Basis -->
-      <section class="section-basis">
+      <section class="basis__section">
         <div class="container">
           <h2 class="visually-hidden">Базис нашей компании</h2>
           <ul class="basis__list list">
@@ -121,7 +121,7 @@
         </div>
       </section>
       <!-- What we do -->
-      <section class="section__work">
+      <section class="work__section">
         <div class="container">
           <h2 class="title">Чем мы занимаемся</h2>
           <ul class="work__list list">
@@ -156,7 +156,7 @@
         </div>
       </section>
       <!-- Our team -->
-      <section class="section__team">
+      <section class="team__section">
         <div class="container">
           <h2 class="title">Наша команда</h2>
           <ul class="team__list list">
@@ -465,18 +465,19 @@
           </ul>
         </div>
 
-        <div class="mailing">
-          <form action="#" class="mailing-form">
-            <label class="mailing-form-label">Подпишитесь на рассылку</label>
-            <div class="mailing-form-wrapper">
+        <div class="newsletter">
+          <form action="#" class="newsletter__form">
+            <label for="user_email" class="newsletter__label">Подпишитесь на рассылку</label>
+            <div class="newsletter__wrapper">
               <input
+              id="user_email"
                 type="email"
-                name="user-email"
-                class="mailing-form-input"
+                name="user_email"
+                class="newsletter__input"
                 placeholder="E-mail"
               />
-              <button type="submit" class="bnt-mailing">Подписаться</button>
-              <svg width="24px" height="24px" class="mailing-form-svg">
+              <button type="submit" class="newsletter__btn">Подписаться</button>
+              <svg width="24px" height="24px" class="newsletter__svg">
                 <use href="./images/sprite.svg#icon-icon-send"></use>
               </svg>
             </div>
@@ -486,7 +487,7 @@
     </footer>
 
     <div class="backdrop is-hidden" data-modal>
-      <div class="backdrop__wrapper">
+      <div class="wrapper">
         <div class="modal">
           <button type="button" class="modal-close__btn" data-modal-close>
             <svg width="11px" height="11px">
@@ -494,75 +495,71 @@
             </svg>
           </button>
           <form action="#" class="modal-form">
-            <h2 class="modal-form__title">
-              Оставьте свои данные, мы вам перезвоним
-            </h2>
-            <label class="modal-form__label">
-              <span class="modal-form__description">Имя*</span>
-              <span class="modal-field__wrapper">
+            <h2 class="modal-form__title">Оставьте свои данные, мы вам перезвоним</h2>
+            <label class="modal-form-label">
+              <span class="description">Имя*</span>
+              <span class="modal-form-field-wrapper">
                 <input
                   type="text"
-                  class="modal-form__input"
+                  class="modal-form-input"
                   placeholder="Ким"
                   required
                   name="user-name"
                   minlength="2"
                   maxlength="15"
                 />
-                <svg class="modal__svg">
+                <svg class="modal-svg">
                   <use
                     href="./images/sprite.svg#icon-person-black-18dp-1"
                   ></use>
                 </svg>
-                <svg class="modal-checkmark__svg">
+                <svg class="modal-svg-checkmark">
                   <use href="./images/sprite.svg#icon-checkmark"></use>
                 </svg>
               </span>
             </label>
-            <label class="modal-form__label">
-              <span class="modal-form__description">Телефон*</span>
-              <span class="modal-field__wrapper">
+            <label class="modal-form-label">
+              <span class="description">Телефон*</span>
+              <span class="modal-form-field-wrapper">
                 <input
                   type="tel"
-                  class="modal-form__input"
+                  class="modal-form-input"
                   placeholder="099-000-0000"
                   required
                   name="user-phone"
                   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                 />
-                <svg class="modal__svg">
+                <svg class="modal-svg">
                   <use href="./images/sprite.svg#icon-phone-black-18dp-1"></use>
                 </svg>
-                <svg class="modal-checkmark__svg">
+                <svg class="modal-svg-checkmark">
                   <use href="./images/sprite.svg#icon-checkmark"></use>
                 </svg>
               </span>
             </label>
-            <label class="modal-form__label">
-              <span class="modal-form__description">Почта*</span>
-              <span class="modal-field__wrapper">
+            <label class="modal-form-label">
+              <span class="description">Почта*</span>
+              <span class="modal-form-field-wrapper">
                 <input
                   type="email"
-                  class="modal-form__input"
+                  class="modal-form-input"
                   placeholder="tesla@test.com"
                   required
                   name="user-email"
                 />
-                <svg class="modal__svg">
+                <svg class="modal-svg">
                   <use href="./images/sprite.svg#icon-email-black-18dp-1"></use>
                 </svg>
-                <svg class="modal-checkmark__svg">
+                <svg class="modal-svg-checkmark">
                   <use href="./images/sprite.svg#icon-checkmark"></use>
                 </svg>
               </span>
             </label>
-            <label for="modal-massage" class="modal-form__description"
-              >Комментарий</label
-            >
+            <label for="modal-massage" class="description">Комментарий</label>
             <textarea
               id="modal-massage"
               name="user-massage"
-              class="modal-form__massage"
+              class="modal-form-massage"
               placeholder="Введите текст"
               maxlength="350"
             ></textarea>
@@ -570,15 +567,15 @@
               type="checkbox"
               name="user-policy"
               value="accept-policy"
-              class="modal-policy visually-hidden"
+              class="modal-form-policy visually-hidden"
               required
               id="check-policy"
             />
-            <label for="check-policy" class="modal-policy__label">
+            <label for="check-policy" class="modal-form-policy-label">
               Соглашаюсь с рассылкой и принимаю
-              <a href="#" class="modal-policy__link">Условия договора</a>
+              <a href="#" class="form-link">Условия договора</a>
             </label>
-            <button type="submit" class="modal-btn">Отправить</button>
+            <button type="submit" class="btn-modal-form">Отправить</button>
           </form>
         </div>
       </div>

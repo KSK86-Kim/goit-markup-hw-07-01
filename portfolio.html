@@ -16,7 +16,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/portfolio.min.css" />
   </head>
   <body>
     <header class="header">
@@ -31,7 +31,9 @@
           </a>
           <ul class="navigation__list list">
             <li class="navigation__item">
-              <a href="./index.html" class="navigation__link link"> Студия </a>
+              <a href="./index.html" class="navigation__link link ">
+                Студия
+              </a>
             </li>
             <li class="navigation__item">
               <a href="./portfolio.html" class="navigation__link active link">
@@ -336,7 +338,6 @@
         </div>
       </section>
     </main>
-
     <footer class="footer">
       <div class="container container--flex">
         <div class="address">
@@ -406,18 +407,19 @@
           </ul>
         </div>
 
-        <div class="mailing">
-          <form action="#" class="mailing-form">
-            <label class="mailing-form-label">Подпишитесь на рассылку</label>
-            <div class="mailing-form-wrapper">
+        <div class="newsletter">
+          <form action="#" class="newsletter__form">
+            <label for="user_email" class="newsletter__label">Подпишитесь на рассылку</label>
+            <div class="newsletter__wrapper">
               <input
+              id="user-email"
                 type="email"
-                name="user-email"
-                class="mailing-form-input"
+                name="user_email"
+                class="newsletter__input"
                 placeholder="E-mail"
               />
-              <button type="submit" class="bnt-mailing">Подписаться</button>
-              <svg width="24px" height="24px" class="mailing-form-svg">
+              <button type="submit" class="newsletter__btn">Подписаться</button>
+              <svg width="24px" height="24px" class="newsletter__svg">
                 <use href="./images/sprite.svg#icon-icon-send"></use>
               </svg>
             </div>
