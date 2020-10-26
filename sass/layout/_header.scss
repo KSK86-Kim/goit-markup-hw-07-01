@@ -1,51 +1,47 @@
 .header {
-    border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 
-    &__logo {
-        margin-right: 93px;
-      }
-    
-      &-contacts {
-        font-style: normal;
-        margin-left: auto;
-
-        &__list {
-            display: flex;
-            text-align: center;
-            align-items: center;
-          }
-
-          &__item:not(:last-child) {
-            margin-right: 30px;
-          }
-
-          &__link {
-            display: flex;
-            align-items: center;
-            color: $description-color;
-            fill: $description-color;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 1.142;
-            letter-spacing: 0.02em;
-            transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-              fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-              &:hover, &:focus {
-                color: $accent-color;
-                fill: $accent-color;
-              }
-
-          
-          }
-          &__svg {
-            margin-right: 10px;
-          }
-      }
-      
+  &__logo {
+    margin-right: 93px;
   }
 
+  &-contacts {
+    font-style: normal;
+    margin-left: auto;
 
+    &__list {
+      display: flex;
+      text-align: center;
+      align-items: center;
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+      color: $description-color;
+      fill: $description-color;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.142;
+      letter-spacing: 0.02em;
+      transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover,
+      &:focus {
+        color: $accent-color;
+        fill: $accent-color;
+      }
+    }
+    &__svg {
+      margin-right: 10px;
+    }
+  }
+}
 
 .navigation {
   display: flex;
@@ -56,10 +52,9 @@
   }
 
   &__item {
-
     &:not(:last-child) {
-        margin-right: 50px;
-      }
+      margin-right: 50px;
+    }
   }
 
   &__link {
@@ -73,12 +68,13 @@
     letter-spacing: 0.02em;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    &:hover, &:focus {
-        color: $accent-color;
-        fill: $accent-color;
+    &:hover,
+    &:focus {
+      color: $accent-color;
+      fill: $accent-color;
     }
   }
-    &__link.active::after {
+  &__link.active::after {
     content: "";
     position: absolute;
     bottom: 1px;
@@ -89,5 +85,4 @@
     background-color: $accent-color;
     border-radius: 2px;
   }
-
 }

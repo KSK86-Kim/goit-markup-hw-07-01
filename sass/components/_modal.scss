@@ -15,14 +15,7 @@
     pointer-events: none;
     transition: all 500ms linear 500ms;
   }
-
-  & .wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 15px;
-  }
+  
 }
 
 .modal {

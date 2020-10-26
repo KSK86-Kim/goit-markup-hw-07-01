@@ -61,6 +61,14 @@ img {
   color: #18a0fb;
 }
 
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 15px;
+}
+
 .container {
   margin: 0 auto;
   width: 1200px;
